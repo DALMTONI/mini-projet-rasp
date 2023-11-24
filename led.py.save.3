@@ -1,0 +1,26 @@
+#!/usr/bin/python
+import RPi.GPIO as GPIO
+import time
+
+# Définir la numérotation des broches (BCM ou BOARD)
+GPIO.setmode(GPIO.BCM)
+
+# Définir la broche GPIO à laquelle est connectée la LED
+led_pin = 17
+
+# Configurer la broche comme une sortie
+GPIO.setup(led_pin, GPIO.OUT)
+
+try:
+    # Allumer la LED en mettant la broche à HIGH
+    GPIO.output(led_pin, GPIO.HIGH)
+    print("LED allumée")
+
+    # Attendre quelques secondes avant de quitter
+    time.sleep(2)
+
+except KeyboardInterrupt:
+    pass
+
+itter proprement
+GPIO.cleanup()

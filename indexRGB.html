@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôle de LED</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4em; /* Augmented font size */
+            margin-top: 10px; /* Increased top margin */
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+
+        input[type="color"] {
+            width: 80px;
+            height: 50px;
+            vertical-align: middle;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform property */
+        }
+
+        button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05); /* Added scale transformation on hover */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Contrôle de LED</h1>
+
+        <form action="on_off_RGB.php" method="post"> 
+            <label for="color">Choisir une couleur :</label>
+            <input type="color" id="color" name="color2"> 
+            <br>
+            
+            <button type="submit" name="color">Allumer</button> 
+            <button type="submit" name="color" value="off">Éteindre la LED</button>       
+        </form>
+
+        
+    </div>
+</body>
+</html>

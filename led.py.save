@@ -1,0 +1,15 @@
+#!/user/bin/python
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(4, GPIO.OUT)
+
+pwm_obj = GPIO.PWM(4,400)
+
+while True:
+	pwm_obj.start(40)
+	time.sleep(15)
+	pwm_obj.ChangeDutyCycle(10)
+	time.sleep(1)
